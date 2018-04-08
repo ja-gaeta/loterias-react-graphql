@@ -12,7 +12,8 @@ const {
   GraphQLSchema,
   GraphQLID,
   GraphQLInt,
-  GraphQLList
+  GraphQLList,
+  GraphQLNonNull
 } = graphql;
 
 const QuinaType = new GraphQLObjectType({
@@ -167,9 +168,13 @@ const Mutation = new GraphQLObjectType({
     addQuina: {
       type: QuinaType,
       args: {
-        concurso: { type: GraphQLString },
-        data: { type: GraphQLString },
-        sorteio: { type: new graphql.GraphQLList(graphql.GraphQLString) }
+        concurso: { type: new GraphQLNonNull(GraphQLString) },
+        data: { type: new GraphQLNonNull(GraphQLString) },
+        sorteio: {
+          type: new GraphQLNonNull(
+            new graphql.GraphQLList(graphql.GraphQLString)
+          )
+        }
       },
       resolve(parent, args) {
         let quina = new Quina({
