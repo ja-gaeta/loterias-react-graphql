@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import QuinaList from './Quina';
+/* Import Views */
+import Home from '../views/Home';
+import Quina from '../views/Quina';
 
-// apollo client setup
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
-});
+const Routes = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/quinas" component={Quina} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
+};
 
-class App extends Component {
-  render() {
-    return (
-      <ApolloProvider client={client}>
-        <div>
-          <h1>Loterias CEF</h1>
-          <QuinaList />
-        </div>
-      </ApolloProvider>
-    );
-  }
-}
-
-export default App;
+export default Routes;

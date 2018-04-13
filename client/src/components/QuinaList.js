@@ -14,13 +14,21 @@ const getQuinasQuery = gql`
 `;
 
 class QuinaList extends Component {
+  displayQuinas() {
+    var data = this.props.data;
+    if (data.loading) {
+      return <div>Loading Quinas</div>;
+    } else {
+      return data.quinas.map(quina => {
+        return <li key={quina.id}>{quina.concurso}</li>;
+      });
+    }
+  }
+
   render() {
-    console.log(this.props);
     return (
       <div>
-        <ul id="quina-list">
-          <li>Concurso Quina</li>
-        </ul>
+        <ul id="quina-list">{this.displayQuinas()}</ul>
       </div>
     );
   }
