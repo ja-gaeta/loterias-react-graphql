@@ -13,9 +13,9 @@ export default class Quina extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <div>
-          <h1>Loterias CEF - Quina</h1>
-          <h2>Último Resultado</h2>
+        <div className="container">
+          <h1 className="title">Loterias CEF - Quina</h1>
+          <h2 className="subtitle">Último Resultado</h2>
           <QuinaList />
         </div>
       </ApolloProvider>
