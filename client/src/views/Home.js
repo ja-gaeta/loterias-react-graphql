@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
+import Header from '../components/Header';
+
 export default class Home extends Component {
   render() {
     return (
-      <div className="container">
-        <h1 className="title">Loterias CEF</h1>
+      <div>
+        <Header />
+        <div className="container">
+          <h1 className="title top">Home</h1>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,4 @@
 body {
-  margin-top: 20px;
   font-family: 'Roboto', sans-serif; }
 
 #quina-list li {
@@ -13,3 +12,6 @@ body {
   height: 40px;
   padding: 6px;
   text-align: center; }
+
+.top {
+  margin-top: 30px; }
