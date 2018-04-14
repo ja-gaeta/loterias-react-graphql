@@ -129,6 +129,14 @@ const RootQuery = new GraphQLObjectType({
         return Quina.find({});
       }
     },
+    lastQuina: {
+      type: new GraphQLList(QuinaType),
+      resolve(parent, args) {
+        return Quina.find()
+          .sort({ _id: -1 })
+          .limit(1);
+      }
+    },
     megasenas: {
       type: new GraphQLList(MegasenaType),
       resolve(parent, args) {

@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo';
 
 const getQuinasQuery = gql`
   {
-    quinas {
+    lastQuina {
       concurso
       data
       sorteio
@@ -19,16 +19,27 @@ class QuinaList extends Component {
     if (data.loading) {
       return <div>Loading Quinas</div>;
     } else {
-      return data.quinas.map(quina => {
-        return <li key={quina.id}>{quina.concurso}</li>;
-      });
+      return (
+        <div>
+          <h3>Concurso: {data.lastQuina[0].concurso}</h3>
+          <h4>Data: {data.lastQuina[0].data}</h4>
+          <p>Sorteio: </p>
+          {data.lastQuina[0].sorteio.map(num => {
+            return (
+              <ul key={num}>
+                <li>{num}</li>
+              </ul>
+            );
+          })}
+        </div>
+      );
     }
   }
 
   render() {
     return (
       <div>
-        <ul id="quina-list">{this.displayQuinas()}</ul>
+        <div id="quina-list">{this.displayQuinas()}</div>
       </div>
     );
   }
