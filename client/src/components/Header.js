@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom';
 export default class Header extends Component {
   render() {
     return (
-      <div className="navbar" role="navigation" aria-label="main navigation">
+      <div
+        className="navbar is-light"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             <img
               src="../img/loterias-caixa.png"
-              width="97"
-              height="35"
+              width="112"
+              height="28"
               alt=""
             />
           </Link>

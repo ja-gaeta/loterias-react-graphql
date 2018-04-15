@@ -7,8 +7,25 @@ export default class Home extends Component {
     return (
       <div>
         <Header />
-        <div className="container">
-          <h1 className="title top">Home</h1>
+
+        <div className="container home">
+          <h1 className="title top">Boa Sorte!</h1>
+          <p>
+            Herdei do meu velho e querido pai o hábito de jogar na loteria e,
+            quem sabe, um dia tirar o pé do lôdo...
+          </p>
+          <p>
+            Para tornar mais interessantes meus estudos de Desenvolvimento para
+            a Web, resolvi criar este projeto, usando os <em>frameworks</em>{' '}
+            para "front-end" atualmente na moda.
+          </p>
+          <p>
+            O ponto alto do projeto é um gerador de palpites, para alimentar o
+            sonho de ficar rico... pelo menos até conferir o resultado!
+          </p>
+          <div className="columns is-centered">
+            <img src="../img/trevo.png" alt="trevo de quatro folhas" />
+          </div>
         </div>
       </div>
     );
