@@ -143,16 +143,40 @@ const RootQuery = new GraphQLObjectType({
         return Megasena.find({});
       }
     },
+    lastMegasena: {
+      type: new GraphQLList(MegasenaType),
+      resolve(parent, args) {
+        return Megasena.find()
+          .sort({ _id: -1 })
+          .limit(1);
+      }
+    },
     lotofaceis: {
       type: new GraphQLList(LotofacilType),
       resolve(parent, args) {
         return Lotofacil.find({});
       }
     },
+    lastLotofacil: {
+      type: new GraphQLList(LotofacilType),
+      resolve(parent, args) {
+        return Lotofacil.find()
+          .sort({ _id: -1 })
+          .limit(1);
+      }
+    },
     duplasenas: {
       type: new GraphQLList(DuplasenaType),
       resolve(parent, args) {
         return Duplasena.find({});
+      }
+    },
+    lastDuplasena: {
+      type: new GraphQLList(DuplasenaType),
+      resolve(parent, args) {
+        return Duplasena.find()
+          .sort({ _id: -1 })
+          .limit(1);
       }
     },
     timemanias: {

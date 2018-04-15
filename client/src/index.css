@@ -1,17 +1,34 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
-#quina-list li {
+#quina-list li,
+#megasena-list li,
+#lotofacil-list li,
+#duplasena-list li {
   display: inline-block;
   margin: 6px;
   font-size: 1.2rem;
-  background: #283593;
   color: #fff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   padding: 6px;
   text-align: center; }
+
+#quina-list li {
+  background: #283593; }
+
+#megasena-list li {
+  background: #00a45f; }
+
+#lotofacil-list li {
+  background: #a23b8f; }
+
+#duplasena-list1 li {
+  background: #971534; }
+
+#duplasena-list2 li {
+  background: #c7154e; }
 
 .top {
   margin-top: 30px; }

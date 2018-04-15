@@ -24,6 +24,15 @@ export default class Header extends Component {
             <Link to="/quina" className="navbar-item">
               <h1 className="subtitle">Quina</h1>
             </Link>
+            <Link to="/megasena" className="navbar-item">
+              <h1 className="subtitle">Megasena</h1>
+            </Link>
+            <Link to="/lotofacil" className="navbar-item">
+              <h1 className="subtitle">Lotofácil</h1>
+            </Link>
+            <Link to="/duplasena" className="navbar-item">
+              <h1 className="subtitle">Duplasena</h1>
+            </Link>
           </div>
         </div>
       </div>
