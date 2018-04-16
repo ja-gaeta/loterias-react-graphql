@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 
-const getDuplasenaQuery = gql`
-  {
-    lastDuplasena {
-      concurso
-      data
-      sorteio1
-      sorteio2
-      id
-    }
-  }
-`;
+import { getDuplasenaQuery } from '../queries/queries';
 
 class DuplasenaList extends Component {
   displayDuplasena() {

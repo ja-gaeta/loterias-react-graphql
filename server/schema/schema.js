@@ -185,10 +185,26 @@ const RootQuery = new GraphQLObjectType({
         return Timemania.find({});
       }
     },
+    lastTimemania: {
+      type: new GraphQLList(TimemaniaType),
+      resolve(parent, args) {
+        return Timemania.find()
+          .sort({ _id: -1 })
+          .limit(1);
+      }
+    },
     lotomanias: {
       type: new GraphQLList(LotomaniaType),
       resolve(parent, args) {
         return Lotomania.find({});
+      }
+    },
+    lastLotomania: {
+      type: new GraphQLList(LotomaniaType),
+      resolve(parent, args) {
+        return Lotomania.find()
+          .sort({ _id: -1 })
+          .limit(1);
       }
     }
   }

@@ -4,7 +4,9 @@ body {
 #quina-list li,
 #megasena-list li,
 #lotofacil-list li,
-#duplasena-list li {
+#duplasena-list li,
+#lotomania-list li,
+#timemania-list li {
   display: inline-block;
   margin: 6px;
   font-size: 1.2rem;
@@ -24,11 +26,18 @@ body {
 #lotofacil-list li {
   background: #a23b8f; }
 
-#duplasena-list1 li {
+Lotomania #duplasena-list1 li {
   background: #971534; }
 
 #duplasena-list2 li {
   background: #c7154e; }
+
+#lotomania-list li {
+  background: #ea7043; }
+
+#timemania-list li {
+  margin-left: 0;
+  background: #e7a345; }
 
 .top {
   margin-top: 30px; }

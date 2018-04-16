@@ -17,7 +17,8 @@ export default class Home extends Component {
           <p>
             Para tornar mais interessantes meus estudos de Desenvolvimento para
             a Web, resolvi criar este projeto, usando os <em>frameworks</em>{' '}
-            para "front-end" atualmente na moda.
+            para "front-end" atualmente na moda: React JS, GraphQL, Apollo JS,
+            Bulma CSS e MongoDB.
           </p>
           <p>
             O ponto alto do projeto é um gerador de palpites, para alimentar o

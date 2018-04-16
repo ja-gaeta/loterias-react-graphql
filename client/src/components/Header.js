@@ -33,6 +33,12 @@ export default class Header extends Component {
             <Link to="/duplasena" className="navbar-item">
               <h1 className="subtitle">Duplasena</h1>
             </Link>
+            <Link to="/lotomania" className="navbar-item">
+              <h1 className="subtitle">Lotomania</h1>
+            </Link>
+            <Link to="/timemania" className="navbar-item">
+              <h1 className="subtitle">Timemania</h1>
+            </Link>
           </div>
         </div>
       </div>

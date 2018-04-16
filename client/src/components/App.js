@@ -7,6 +7,8 @@ import Quina from '../views/Quina';
 import Megasena from '../views/Megasena';
 import Lotofacil from '../views/Lotofacil';
 import Duplasena from '../views/Duplasena';
+import Lotomania from '../views/Lotomania';
+import Timemania from '../views/Timemania';
 
 const Routes = () => {
   return (
@@ -18,6 +20,8 @@ const Routes = () => {
           <Route path="/megasena" component={Megasena} />
           <Route path="/lotofacil" component={Lotofacil} />
           <Route path="/duplasena" component={Duplasena} />
+          <Route path="/lotomania" component={Lotomania} />
+          <Route path="/timemania" component={Timemania} />
         </Switch>
       </div>
     </BrowserRouter>

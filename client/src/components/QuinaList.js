@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 
-const getQuinasQuery = gql`
-  {
-    lastQuina {
-      concurso
-      data
-      sorteio
-      id
-    }
-  }
-`;
+import { getQuinasQuery } from '../queries/queries';
 
 class QuinaList extends Component {
   displayQuinas() {

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 
-import { getMegasenaQuery } from '../queries/queries';
+import { getTimemaniaQuery } from '../queries/queries';
 
-class MegasenaList extends Component {
-  displayMegasena() {
+class TimemaniaList extends Component {
+  displayTimemania() {
     var data = this.props.data;
 
     if (data.loading) {
-      return <div>Carregando Megasena</div>;
+      return <div>Carregando Timemania</div>;
     } else {
       var sorteioSorted = [];
-      data.lastMegasena[0].sorteio.map(aNum => {
+      data.lastTimemania[0].sorteio.map(aNum => {
         return sorteioSorted.push(parseInt(aNum, 10));
       });
       sorteioSorted.sort(function(x, y) {
@@ -20,10 +20,10 @@ class MegasenaList extends Component {
       return (
         <div>
           <h1 className="subtitle">
-            <strong>Concurso:</strong> {data.lastMegasena[0].concurso}
+            <strong>Concurso:</strong> {data.lastTimemania[0].concurso}
           </h1>
           <p className="subtitle">
-            <strong>Data:</strong> {data.lastMegasena[0].data}
+            <strong>Data:</strong> {data.lastTimemania[0].data}
           </p>
           <p className="subtitle">
             <strong>Sorteio:</strong>{' '}
@@ -33,6 +33,9 @@ class MegasenaList extends Component {
               return <li key={num}>{num}</li>;
             })}
           </ul>
+          <p className="subtitle">
+            <strong>Time:</strong> {data.lastTimemania[0].time}
+          </p>
         </div>
       );
     }
@@ -41,10 +44,10 @@ class MegasenaList extends Component {
   render() {
     return (
       <div>
-        <div id="megasena-list">{this.displayMegasena()}</div>
+        <div id="timemania-list">{this.displayTimemania()}</div>
       </div>
     );
   }
 }
 
-export default graphql(getMegasenaQuery)(MegasenaList);
+export default graphql(getTimemaniaQuery)(TimemaniaList);
