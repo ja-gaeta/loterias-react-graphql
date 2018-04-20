@@ -19,13 +19,13 @@ class QuinaList extends Component {
       });
       return (
         <div>
-          <h1 className="subtitle">
+          <p className="subtitle">
             <strong>Concurso:</strong> {data.lastQuina[0].concurso}
-          </h1>
+          </p>
           <p className="subtitle">
             <strong>Data:</strong> {data.lastQuina[0].data}
           </p>
-          <p className="subtitle">
+          <p className="subtitle" style={{ marginBottom: 0 }}>
             <strong>Sorteio:</strong>{' '}
           </p>
           <ul>

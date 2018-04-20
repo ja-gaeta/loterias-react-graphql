@@ -1,6 +1,17 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
+#quina-list ul,
+#megasena-list ul,
+#lotofacil-list ul,
+#duplasena-list ul,
+#lotomania-list ul,
+#timemania-list ul {
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center; }
+
 #quina-list li,
 #megasena-list li,
 #lotofacil-list li,
@@ -8,7 +19,7 @@ body {
 #lotomania-list li,
 #timemania-list li {
   display: inline-block;
-  margin: 6px;
+  margin: 4px;
   font-size: 1.2rem;
   color: #fff;
   border-radius: 50%;
@@ -56,3 +67,8 @@ body {
 
 .navbar {
   background-color: #485a3f; }
+
+.card {
+  padding: 10px;
+  -webkit-box-shadow: 5px 7px 15px 5px rgba(0, 0, 0, 0.38);
+  box-shadow: 5px 7px 15px 5px rgba(0, 0, 0, 0.38); }

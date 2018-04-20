@@ -17,12 +17,22 @@ export default class Duplasena extends Component {
         <div>
           <Header />
           <div className="container">
-            <img
-              src={require('../img/duplasena.png')}
-              style={{ width: 20 + '%', marginTop: 10 }}
-            />
-            <h2 className="subtitle">Último Resultado</h2>
-            <DuplasenaList />
+            <div className="column is-one-third is-flex">
+              <div className="card">
+                <div className="card-image">
+                  <img
+                    src={require('../img/duplasena.png')}
+                    alt="Logo da Duplasena"
+                  />
+                </div>
+
+                <p className="title is-4">Último Resultado</p>
+
+                <div className="content">
+                  <DuplasenaList />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ApolloProvider>

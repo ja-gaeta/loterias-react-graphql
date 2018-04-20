@@ -23,13 +23,13 @@ class LotomaniaList extends Component {
       var sorteioSorted4 = sorteioSorted.slice(15, 20);
       return (
         <div>
-          <h1 className="subtitle">
+          <p className="subtitle">
             <strong>Concurso:</strong> {data.lastLotomania[0].concurso}
-          </h1>
+          </p>
           <p className="subtitle">
             <strong>Data:</strong> {data.lastLotomania[0].data}
           </p>
-          <p className="subtitle">
+          <p className="subtitle" style={{ marginBottom: 0 }}>
             <strong>Sorteio:</strong>{' '}
           </p>
           <ul>

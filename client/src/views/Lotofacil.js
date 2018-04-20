@@ -17,12 +17,22 @@ export default class Lotofacil extends Component {
         <div>
           <Header />
           <div className="container">
-            <img
-              src={require('../img/lotofacil.png')}
-              style={{ width: 20 + '%', marginTop: 10 }}
-            />
-            <h2 className="subtitle">Último Resultado</h2>
-            <LotofacilList />
+            <div className="column is-one-third is-flex">
+              <div className="card">
+                <div className="card-image">
+                  <img
+                    src={require('../img/lotofacil.png')}
+                    alt="Logo da Lotofácil"
+                  />
+                </div>
+
+                <p className="title is-4">Último Resultado</p>
+
+                <div className="content">
+                  <LotofacilList />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ApolloProvider>

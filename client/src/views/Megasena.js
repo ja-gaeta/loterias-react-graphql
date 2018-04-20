@@ -17,12 +17,22 @@ export default class Megasena extends Component {
         <div>
           <Header />
           <div className="container">
-            <img
-              src={require('../img/mega-sena.png')}
-              style={{ width: 20 + '%', marginTop: 10 }}
-            />
-            <h2 className="subtitle">Último Resultado</h2>
-            <MegasenaList />
+            <div className="column is-one-third is-flex">
+              <div className="card">
+                <div className="card-image">
+                  <img
+                    src={require('../img/mega-sena.png')}
+                    alt="Logo da Mega Sena"
+                  />
+                </div>
+
+                <p className="title is-4">Último Resultado</p>
+
+                <div className="content">
+                  <MegasenaList />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ApolloProvider>

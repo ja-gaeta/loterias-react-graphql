@@ -26,13 +26,13 @@ class DuplasenaList extends Component {
       });
       return (
         <div>
-          <h1 className="subtitle">
+          <p className="subtitle">
             <strong>Concurso:</strong> {data.lastDuplasena[0].concurso}
-          </h1>
+          </p>
           <p className="subtitle">
             <strong>Data:</strong> {data.lastDuplasena[0].data}
           </p>
-          <p className="subtitle">
+          <p className="subtitle" style={{ marginBottom: 0 }}>
             <strong>Primeiro Sorteio:</strong>{' '}
             <span>
               <ul id="duplasena-list1">
@@ -42,7 +42,7 @@ class DuplasenaList extends Component {
               </ul>
             </span>
           </p>
-          <p className="subtitle">
+          <p className="subtitle" style={{ marginBottom: 0 }}>
             <strong>Segundo Sorteio:</strong>{' '}
             <span>
               <ul id="duplasena-list2">

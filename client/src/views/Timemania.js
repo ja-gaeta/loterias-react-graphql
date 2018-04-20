@@ -17,12 +17,22 @@ export default class Timemania extends Component {
         <div>
           <Header />
           <div className="container">
-            <img
-              src={require('../img/timemania.png')}
-              style={{ width: 20 + '%', marginTop: 10 }}
-            />
-            <h2 className="subtitle">Último Resultado</h2>
-            <TimemaniaList />
+            <div className="column is-one-third is-flex">
+              <div className="card">
+                <div className="card-image">
+                  <img
+                    src={require('../img/timemania.png')}
+                    alt="Logo da Timemania"
+                  />
+                </div>
+
+                <p className="title is-4">Último Resultado</p>
+
+                <div className="content">
+                  <TimemaniaList />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ApolloProvider>

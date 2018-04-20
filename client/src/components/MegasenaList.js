@@ -19,13 +19,13 @@ class MegasenaList extends Component {
       });
       return (
         <div>
-          <h1 className="subtitle">
+          <p className="subtitle">
             <strong>Concurso:</strong> {data.lastMegasena[0].concurso}
-          </h1>
+          </p>
           <p className="subtitle">
             <strong>Data:</strong> {data.lastMegasena[0].data}
           </p>
-          <p className="subtitle">
+          <p className="subtitle" style={{ marginBottom: 0 }}>
             <strong>Sorteio:</strong>{' '}
           </p>
           <ul>
