@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo';
 
 import { getDuplasenaQuery } from '../queries/queries';
 
-class DuplasenaList extends Component {
+class ResDuplasena extends Component {
   displayDuplasena() {
     var data = this.props.data;
 
@@ -66,4 +66,4 @@ class DuplasenaList extends Component {
   }
 }
 
-export default graphql(getDuplasenaQuery)(DuplasenaList);
+export default graphql(getDuplasenaQuery)(ResDuplasena);

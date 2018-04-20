@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import LotofacilList from '../components/LotofacilList';
+import ResLotofacil from '../components/ResLotofacil';
 import Header from '../components/Header';
 
 // apollo client setup
@@ -29,7 +29,7 @@ export default class Lotofacil extends Component {
                 <p className="title is-4">Último Resultado</p>
 
                 <div className="content">
-                  <LotofacilList />
+                  <ResLotofacil />
                 </div>
               </div>
             </div>

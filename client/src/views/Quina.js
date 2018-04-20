@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import QuinaList from '../components/QuinaList';
+import ResQuina from '../components/ResQuina';
 import Header from '../components/Header';
 
 // apollo client setup
@@ -26,7 +26,7 @@ export default class Quina extends Component {
                 <p className="title is-4">Último Resultado</p>
 
                 <div className="content">
-                  <QuinaList />
+                  <ResQuina />
                 </div>
               </div>
             </div>

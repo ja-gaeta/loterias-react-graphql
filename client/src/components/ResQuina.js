@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo';
 
 import { getQuinasQuery } from '../queries/queries';
 
-class QuinaList extends Component {
+class ResQuina extends Component {
   displayQuinas() {
     var data = this.props.data;
 
@@ -47,4 +47,4 @@ class QuinaList extends Component {
   }
 }
 
-export default graphql(getQuinasQuery)(QuinaList);
+export default graphql(getQuinasQuery)(ResQuina);

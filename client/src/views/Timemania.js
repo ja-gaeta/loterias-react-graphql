@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import TimemaniaList from '../components/TimemaniaList';
+import ResTimemania from '../components/ResTimemania';
 import Header from '../components/Header';
 
 // apollo client setup
@@ -29,7 +29,7 @@ export default class Timemania extends Component {
                 <p className="title is-4">Último Resultado</p>
 
                 <div className="content">
-                  <TimemaniaList />
+                  <ResTimemania />
                 </div>
               </div>
             </div>
