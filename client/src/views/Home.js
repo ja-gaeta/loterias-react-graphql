@@ -25,7 +25,7 @@ export default class Home extends Component {
             sonho de ficar rico... pelo menos até conferir o resultado!
           </p>
           <div className="columns is-centered">
-            <img src="../img/trevo.png" alt="trevo de quatro folhas" />
+            <img src={require('../img/trevo.png')} />
           </div>
         </div>
       </div>

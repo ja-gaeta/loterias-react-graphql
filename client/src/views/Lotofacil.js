@@ -17,7 +17,10 @@ export default class Lotofacil extends Component {
         <div>
           <Header />
           <div className="container">
-            <h1 className="title top">Loterias CEF - Lotofácil</h1>
+            <img
+              src={require('../img/lotofacil.png')}
+              style={{ width: 20 + '%', marginTop: 10 }}
+            />
             <h2 className="subtitle">Último Resultado</h2>
             <LotofacilList />
           </div>

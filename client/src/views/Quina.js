@@ -17,7 +17,10 @@ export default class Quina extends Component {
         <div>
           <Header />
           <div className="container">
-            <h1 className="title top">Loterias CEF - Quina</h1>
+            <img
+              src={require('../img/quina.png')}
+              style={{ width: 20 + '%', marginTop: 10 }}
+            />
             <h2 className="subtitle">Último Resultado</h2>
             <QuinaList />
           </div>

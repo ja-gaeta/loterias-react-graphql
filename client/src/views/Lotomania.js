@@ -17,7 +17,10 @@ export default class Lotomania extends Component {
         <div>
           <Header />
           <div className="container">
-            <h1 className="title top">Loterias CEF - Lotomania</h1>
+            <img
+              src={require('../img/lotomania.png')}
+              style={{ width: 20 + '%', marginTop: 10 }}
+            />
             <h2 className="subtitle">Último Resultado</h2>
             <LotomaniaList />
           </div>
