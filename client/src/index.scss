@@ -99,3 +99,23 @@ body {
   -webkit-box-shadow: 5px 7px 15px 5px rgba(0, 0, 0, 0.38);
   box-shadow: 5px 7px 15px 5px rgba(0, 0, 0, 0.38);
 }
+
+.modal-content {
+  overflow: hidden;
+}
+
+.table {
+  padding: 20px;
+  th,
+  td {
+    text-align: center;
+  }
+}
+
+.loto-body {
+  margin-top: 15px;
+}
+
+#preco-apostas {
+  float: right;
+}

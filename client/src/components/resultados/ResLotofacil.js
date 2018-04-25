@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 
-import { getLotomaniaQuery } from '../queries/queries';
+import { getLotofacilQuery } from '../../queries/queries';
 
-class ResLotomania extends Component {
-  displayLotomania() {
+class ResLotofacil extends Component {
+  displayLotofacil() {
     var data = this.props.data;
 
     if (data.loading) {
-      return <div>Carregando Lotomania</div>;
+      return <div>Carregando Lotofácil</div>;
     } else {
       var sorteioSorted = [];
-      data.lastLotomania[0].sorteio.map(aNum => {
+      data.lastLotofacil[0].sorteio.map(aNum => {
         return sorteioSorted.push(parseInt(aNum, 10));
       });
       sorteioSorted.sort(function(x, y) {
@@ -20,14 +20,13 @@ class ResLotomania extends Component {
       var sorteioSorted1 = sorteioSorted.slice(0, 5);
       var sorteioSorted2 = sorteioSorted.slice(5, 10);
       var sorteioSorted3 = sorteioSorted.slice(10, 15);
-      var sorteioSorted4 = sorteioSorted.slice(15, 20);
       return (
         <div>
           <p className="subtitle">
-            <strong>Concurso:</strong> {data.lastLotomania[0].concurso}
+            <strong>Concurso:</strong> {data.lastLotofacil[0].concurso}
           </p>
           <p className="subtitle">
-            <strong>Data:</strong> {data.lastLotomania[0].data}
+            <strong>Data:</strong> {data.lastLotofacil[0].data}
           </p>
           <p className="subtitle" style={{ marginBottom: 0 }}>
             <strong>Sorteio:</strong>{' '}
@@ -47,11 +46,6 @@ class ResLotomania extends Component {
               return <li key={num}>{num}</li>;
             })}
           </ul>
-          <ul>
-            {sorteioSorted4.map(num => {
-              return <li key={num}>{num}</li>;
-            })}
-          </ul>
         </div>
       );
     }
@@ -60,10 +54,10 @@ class ResLotomania extends Component {
   render() {
     return (
       <div>
-        <div id="lotomania-list">{this.displayLotomania()}</div>
+        <div id="lotofacil-list">{this.displayLotofacil()}</div>
       </div>
     );
   }
 }
 
-export default graphql(getLotomaniaQuery)(ResLotomania);
+export default graphql(getLotofacilQuery)(ResLotofacil);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 
-import { getQuinasQuery } from '../queries/queries';
+import { getQuinasQuery } from '../../queries/queries';
 
 class ResQuina extends Component {
   displayQuinas() {

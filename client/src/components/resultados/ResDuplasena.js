@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 
-import { getDuplasenaQuery } from '../queries/queries';
+import { getDuplasenaQuery } from '../../queries/queries';
 
 class ResDuplasena extends Component {
   displayDuplasena() {
